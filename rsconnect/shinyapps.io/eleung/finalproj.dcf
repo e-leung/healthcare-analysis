@@ -1,0 +1,12 @@
+name: finalproj
+title: finalproj
+username:
+account: eleung
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3356357
+bundleId: 3946515
+url: https://eleung.shinyapps.io/finalproj/
+when: 1607149688.15748
+asMultiple: FALSE
+asStatic: FALSE
