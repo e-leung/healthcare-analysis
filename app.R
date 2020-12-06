@@ -2,9 +2,9 @@ library(shiny)
 library(tidyverse)
 library(leaflet)
 library(geojsonio)
-require(devtools)
+#require(devtools)
 library(readxl)
-install_version("colorspace", version = "1.4.1", repos = "http://cran.us.r-project.org")
+#install_version("colorspace", version = "1.4.1", repos = "http://cran.us.r-project.org")
 
 medicaid.data <- read.csv("/Users/ericleung/Desktop/Midd Year 4/Semester 1/MATH 216/finalproj/medicaid_data.csv")
 
