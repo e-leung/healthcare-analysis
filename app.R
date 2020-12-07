@@ -70,13 +70,14 @@ ui <- fluidPage(
              h5("Made by Jackson Chen, Bryan Brito-Martinez, Eric Leung"),
              p("Our project will examine how health insurance coverage in
              the United States has changed over the past decade,
-             since the passing of the Affordable Care Act (ACA). Since 2010,
+             since the landmark passing of the Affordable Care Act (ACA). Since 2010,
              healthcare has been a pressing issue with the passing of the ACA,
-             the Medicare For All Movement beginning in 2015, and the COVID 
+             the Medicare For All Movement beginning in 2015, and the COVID-19
              pandemic. Our data will examine how uninsurance rates have changed 
                 since the passing of the ACA, the effects of the Medicaid expansion
-                in individual states, and how different ethnic groups have different
-                rates of uninsurance."),
+                in individual states, how different ethnic groups have different
+                rates of uninsurance, and how the uninsured rate for people with 
+                incomes below the federal poverty line decreased since 2010."),
              p("Brief overview of the Affordable Care Act: ")),
     tabPanel("Uninsured Rate Change between 2010 and 2015",
              leafletOutput(outputId = "leaflet1", 
