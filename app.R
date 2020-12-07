@@ -195,7 +195,7 @@ server <- function(input, output, session) {
                  color = Type)) +
       geom_line() +
       geom_point() +
-      labs(x = Year) +
+      labs(x = "Year") +
       theme_minimal()
   })
 }
