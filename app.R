@@ -68,40 +68,59 @@ ui <- fluidPage(
   tabsetPanel(
     tabPanel("Introduction",
              h5("Made by Jackson Chen, Bryan Brito-Martinez, Eric Leung"),
+             
+             p("Brief overview of the Affordable Care Act: The ACA had numerous impacts
+               on the fast food, pharmaceutical, and of course, healthcare industries. For example,
+               it made fast food restaurants display how many calories are in their food, allowing
+               consumers to make smarter decisions. It forbade insurance companies from discriminating
+               based on having a disability, or charging more due to pre-existing conditions. Most notably,
+               it opened enrollment in Medicaid to everyone making up to 133% of the federal poverty line. 
+               Businesses with over 50 employees must also offer health insurance to full-time employees or
+               pay a fee.
+               Additionally, it enacted a 'mandate' for insurance, meaning people who could 
+               afford health insurance but did not enroll would be charged a fee."),
+             
              p("Our project will examine how health insurance coverage in
-             the United States has changed over the past decade,
+             the United States has dramatically changed over the past decade,
              since the landmark passing of the Affordable Care Act (ACA). Since 2010,
              healthcare has been a pressing issue with the passing of the ACA,
              the Medicare For All Movement beginning in 2015, and the COVID-19
              pandemic. Our data will examine how uninsurance rates have changed 
-                since the passing of the ACA, the effects of the Medicaid expansion
-                in individual states, how different ethnic groups have different
-                rates of uninsurance, and how the uninsured rate for people with 
-                incomes below the federal poverty line decreased since 2010."),
-             p("Brief overview of the Affordable Care Act: ")),
+             since the passing of the ACA, the effects of the Medicaid expansion
+             in individual states, how different ethnic groups have different
+             rates of uninsurance, and how the uninsured rate for people with 
+             incomes below the federal poverty line decreased since 2010.")),
     tabPanel("Uninsured Rate Change between 2010 and 2015",
              leafletOutput(outputId = "leaflet1", 
                            height = 500),
-             p("Here, we can see that there has been a decrease in the uninsurance rate
+             p("In the map above, we can see that there has been a decrease in the uninsured rate
                 across the board in all 50 states. Oregon, California, Nevada, New Mexico,
                 Kentucky, and West Virginia had the greatest decreases in uninsured rates between
-                2010 and 2015. North Dakota, Maine, and Massachusetts had the smallest change in uninsured
-                rates between 2010 and 2015.")),
+                2010 and 2015 while North Dakota, Maine, and Massachusetts had the smallest change.
+                So, since 2010, there has been a widespread decrease in uninsured rates throughout
+                the country.")),
     tabPanel("States that accepted the 2016 Medicaid Expansion",
              p("We see that there has been an overall decrease in Medicaid 
-                coverage throughout the 50 states. Although, this does not
-                definitively indicate that Medicaid. The change in Medicaid
+                coverage throughout the 50 states. The change in Medicaid
                 coverage could be due to people who were previously on Medicaid
-                moving to employer insurance or to Medicare."),
+                moving to employer insurance or to Medicare. The ACA mandate could
+                also be a reason people are moving away from Medicaid and onto a
+                private insurance plan. Below, we have a bar chart showing that
+                states that accepted the Medicaid expansion have a lower uninsured rate,
+                on average. This makes sense because the expansion opened Medicaid
+                to people making 133% of the federal poverty line."),
              leafletOutput(outputId = "leaflet2", 
                            height = 500),
              p("Washington, Arizona, and Maine had the greatest increase to Medicare
-               coverage, with 2% or greater increases."),
+               coverage, with 2% or greater increases. However, Maine rejected the
+               expansion, indicating that other variables are at play."),
              plotOutput(outputId = "plot2")),
     tabPanel("Changes in uninsured rates by race and ethnicity",
-             p("The Brookings Institute, a leading economic think tank, stated that
+             p("The Brookings Institution, a leading economic think tank, stated that
                 'People of color are far more likely to be uninsured in America, 
-                due in part to several states’ refusal to expand Medicaid.'"),
+                due in part to several states’ refusal to expand Medicaid.' To explore
+                this statement further, we look at uninsured rates of different ethnic
+                and racial groups in the US."),
              checkboxGroupInput("input1", "Choose a race/ethnicity", 
                                 choices = c("Total", "White", "Black", "Hispanic",
                                             "Asian/Native Hawaiian and Pacific Islander",
@@ -113,7 +132,7 @@ ui <- fluidPage(
                uninsured rates but Hispanics and American Indians'Alaska Natives saw a significant decrease
                in uninsured rates, almost 20%."),
              p("The largest decrease happened in 2013, which is mainly attributed to the major provisions
-             of the ACA going into effect and the economy improved since the 2008 Great Recession.
+             of the ACA going into effect and the economy improving since the 2008 Great Recession.
                ")),
     tabPanel("Changes in coverage for people below the FPL",
              p("Looking at data from the KFF, we see that the healthcare coverge of 
@@ -126,7 +145,14 @@ ui <- fluidPage(
                into effect."),
              plotOutput(outputId = "plot3")),
     tabPanel("Conclusion and Discussion",
-             )
+             p("The healthcare industry has changed significantly since the passing of the
+             ACA in 2010. Uninsured rates have fallen in all 50 states, presumably due to
+             the ACA mandate and Medicaid expansion. However, our dataset does not provide a
+             conclusive answer to whether or not the Medicaid expansion helped drive down
+             uninsured rates because Medicaid coverage varies depending on state. However,
+             there is clear evidence that people living under the poverty line and people of color
+             have lower uninsured rates now than they did in 2010.")
+    )
   )
 )
 
